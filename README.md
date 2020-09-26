@@ -1,2 +1,1 @@
-# Discord-bot-rust
-
+# Francoland Bot (FrancoBot)

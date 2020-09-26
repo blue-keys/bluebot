@@ -1,0 +1,14 @@
+[package]
+name = "discord-bot-rust"
+version = "1.1.0"
+authors = ["Azales <kayzoku94500@hotmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serenity = "0.9.0-rc.1"
+tokio = { version = "0.2", features = ["macros"] }
+ron = "0.6.1"
+lazy_static = "1.4.0"
+serde = "1.0.115"
