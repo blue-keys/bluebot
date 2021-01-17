@@ -3,10 +3,15 @@
 ## Les liens utiles
 
 Guide pour apprendre le langage rust : [Guide du Rust](https://docs.digitall.zone/guide/dev/langages-informatique/rust)
+
 Documentation serenity : [serenity version 0.9.0-rc.1](https://docs.rs/serenity/0.9.0-rc.1/serenity/index.html)
+
 Qu'est ce que le RON ? : [RON](https://github.com/ron-rs/ron)
+
 Feuille de rappel du Ron : [feuille de rappel RON](https://github.com/ron-rs/ron/wiki/Specification)
+
 La document de la lib ron en rust : [ron crate](https://docs.rs/ron/0.6.4/ron/)
+
 Pour ajouter votre bot à votre serveur : https://discord.com/oauth2/authorize?client_id=123456789012345678&scope=bot (il suffit de remplacer ce qui se trouve après client_id par l'id de votre bot et de lancer ce lien sur votre navigateur) 
 
 ## Comment utiliser notre socle de bot ?
