@@ -40,7 +40,7 @@ pub async fn get_owners(token : &str) -> HashSet<serenity::model::id::UserId> {
 }
 
 pub async fn get_client(token : &str, framework : StandardFramework) -> Client {
-    Client::new(&token)
+    Client::builder(&token)
         .event_handler(Handler)
         .framework(framework)
         .await
