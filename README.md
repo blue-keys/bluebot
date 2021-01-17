@@ -1,1 +1,1 @@
-# Francoland Bot (FrancoBot)
+# Discord Bot
