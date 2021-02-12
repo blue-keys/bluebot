@@ -2,7 +2,7 @@
 
 ## Les liens utiles
 
-Guide pour apprendre le langage rust : [Guide du Rust](https://docs.digitall.zone/guide/dev/langages-informatique/rust)
+Guide pour apprendre le langage rust : [Guide du Rust](https://docs.bluekeys.org/guide/dev/langages-informatique/rust)
 
 Documentation serenity : [serenity version 0.9.0-rc.1](https://docs.rs/serenity/0.9.0-rc.1/serenity/index.html)
 
