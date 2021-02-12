@@ -17,6 +17,8 @@ pub struct Events {
     pub azales_admin_error : String,
     pub azales_admin : String,
     pub azales_libre_msg_error : String,
+    pub azales_join : String,
+    pub azales_quit : String,
 }
 
 #[derive(Deserialize)]

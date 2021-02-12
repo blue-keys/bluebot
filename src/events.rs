@@ -15,7 +15,10 @@ impl EventHandler for Handler {
                     eprintln!("{}", UTILS.events.azales_admin_error);
                 } else {
                     println!("{}", UTILS.events.azales_admin);
-                    if let Err(e) = ctx.http.send_message(803919224979980334, &"Le meilleur administrateur Azales est de retour !".to_string().into()).await {
+                    let channel = ChannelId(803919224979980334);
+                    if let Err(e) = channel.send_message(&ctx,|m| {
+                        m.content(format!("{}", UTILS.events.azales_join))
+                    }).await {
                         eprintln!("{} : {:?}", UTILS.events.azales_libre_msg_error, e);
                     }
                 }
@@ -26,7 +29,10 @@ impl EventHandler for Handler {
     async fn guild_member_removal(&self, ctx: Context, guild_id : GuildId, user : User, _ : Option<Member>) {
         if guild_id.as_u64() == &803919224539578378 {
             if user.id.as_u64() == &346637028118757378 {
-                if let Err(e) = ctx.http.send_message(803919224979980334, &"Azales reviendra dans une ou deux années plutonienne !".to_string().into()).await {
+                let channel = ChannelId(803919224979980334);
+                if let Err(e) = channel.send_message(&ctx,|m| {
+                    m.content(format!("{}", UTILS.events.azales_quit))
+                }).await {
                     eprintln!("{} : {:?}", UTILS.events.azales_libre_msg_error, e);
                 }
             }

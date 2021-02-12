@@ -10,6 +10,8 @@ Utils(
         azales_admin_error : "Malheureusement Azales, ne sera pas admin aujourd'hui",
         azales_admin : "Azales est là !",
         azales_libre_msg_error : "Erreur lors de l'envoie du message dans le salon `tchat-libre`",
+        azales_join : "Le meilleur administrateur `Azales` est de retour !"
+        azales_quit : "`Azales` reviendra dans une ou deux années plutonienne !",
     ),
     commands : Commands(
         ping : "`Pong !`",

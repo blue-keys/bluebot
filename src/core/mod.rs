@@ -14,7 +14,7 @@ pub mod ext_lib {
             StandardFramework,
         },
         http::Http,
-        model::{channel::Message, gateway::Ready, id::{UserId, GuildId}, guild::Member, user::User},
+        model::{channel::Message, gateway::Ready, id::{UserId, GuildId}, guild::Member, user::User, id::ChannelId},
         client::{Context, Client, EventHandler, bridge::gateway::ShardManager},
         async_trait,
         utils::{Color, Colour},
