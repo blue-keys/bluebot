@@ -16,6 +16,7 @@ pub struct Events {
     pub ready_msg : String,
     pub azales_admin_error : String,
     pub azales_admin : String,
+    pub azales_libre_msg_error : String,
 }
 
 #[derive(Deserialize)]
@@ -25,6 +26,9 @@ pub struct Commands {
     pub info_desc : String,
     pub info_fields : Option<Vec<(String, String, bool)>>,
     pub info_footer : String,
+    pub shutdown_success : String,
+    pub shutdown_failure : String,
+    pub restart : String,
 }
 
 #[derive(Deserialize)]

@@ -29,3 +29,33 @@ async fn info(ctx : &Context, msg : &Message) -> CommandResult {
     }).await?;
     Ok(())
 }
+
+#[command]
+#[required_permissions(ADMINISTRATOR)]
+#[description("Eteint le bot")]
+#[max_args(0)]
+async fn shutdown(ctx : &Context, msg : &Message) -> CommandResult {
+    let data = ctx.data.read().await;
+
+    if let Some(manager) = data.get::<ShardManagerContainer>() {
+        msg.reply(ctx, &UTILS.commands.shutdown_success).await?;
+        manager.lock().await.shutdown_all().await;
+    } else {
+        msg.reply(ctx, &UTILS.commands.shutdown_failure).await?;
+
+        return Ok(());
+    }
+
+    Ok(())
+}
+
+#[command]
+#[required_permissions(ADMINISTRATOR)]
+#[description("Redémarre le bot")]
+#[max_args(0)]
+async fn restart(ctx : &Context, msg : &Message) -> CommandResult {
+    msg.reply(ctx, &UTILS.commands.restart).await?;
+    ctx.shard.shutdown_clean();
+
+    Ok(())
+}

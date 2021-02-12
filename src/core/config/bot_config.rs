@@ -16,6 +16,12 @@ pub fn get_framework(owners : HashSet<serenity::model::id::UserId>) -> StandardF
 }
 
 //==========================================================================================================
+pub struct ShardManagerContainer;
+
+impl TypeMapKey for ShardManagerContainer {
+    type Value = Arc<Mutex<ShardManager>>;
+}
+
 pub fn get_token() -> String {
     env::var(&UTILS.bot_conf.var_token).expect(&UTILS.bot_conf.expect_token)
 }

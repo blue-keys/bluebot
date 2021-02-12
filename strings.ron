@@ -9,6 +9,7 @@ Utils(
         ready_msg : "Bluebot est réveillé",
         azales_admin_error : "Malheureusement Azales, ne sera pas admin aujourd'hui",
         azales_admin : "Azales est là !",
+        azales_libre_msg_error : "Erreur lors de l'envoie du message dans le salon `tchat-libre`",
     ),
     commands : Commands(
         ping : "`Pong !`",
@@ -19,5 +20,8 @@ Utils(
             ("Développé par : ", "Azales avec l'aide et la supervision de Léolios", false),
         ]),
         info_footer : "Pour rejoindre le serveur BlueKeys : https://discord.gg/dKvSwtsc6Q",
+        shutdown_success : "Au revoir !",
+        shutdown_failure : "Il y a eu un problème lors de la récupération du shard manager",
+        restart : "Je me relance !"
     )
 )

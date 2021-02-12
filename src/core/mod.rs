@@ -14,10 +14,11 @@ pub mod ext_lib {
             StandardFramework,
         },
         http::Http,
-        model::{channel::Message, gateway::Ready, id::{UserId, GuildId}, guild::Member},
-        client::{Context, Client, EventHandler},
+        model::{channel::Message, gateway::Ready, id::{UserId, GuildId}, guild::Member, user::User},
+        client::{Context, Client, EventHandler, bridge::gateway::ShardManager},
         async_trait,
         utils::{Color, Colour},
+        prelude::{Mutex, TypeMapKey},
     };
 
     pub use serde::Deserialize;
@@ -31,7 +32,7 @@ pub mod std_lib {
     pub use std::fs;
     pub use std::env;
     pub use std::collections::HashSet;
-
+    pub use std::sync::Arc;
 }
 
 pub mod our_lib {
