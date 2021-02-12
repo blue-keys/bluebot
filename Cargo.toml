@@ -1,6 +1,6 @@
 [package]
-name = "discord-bot-rust"
-version = "1.1.0"
+name = "bluebot"
+version = "1.2.0"
 authors = ["Azales <kayzoku94500@hotmail.com>"]
 edition = "2018"
 

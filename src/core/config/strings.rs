@@ -7,7 +7,6 @@ use crate::core::{std_lib::*, ext_lib::*};
 pub struct BotConf {
     pub prefix : String,
     pub expect_token : String,
-    pub expect_client_new : String,
     pub var_token : String,
     pub expect_client_builder : String,
 }
