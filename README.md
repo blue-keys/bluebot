@@ -37,14 +37,14 @@ sudo apt install rustc
 ```
 
 ```bash
-# editer le fichier du profile de l'utilisateur
+# editer le fichier du profile de l'utilisateur courant
 nano .profile
 
 # ajouter à la fin votre token
 export BLUEBOT_TOKEN=O000000000000000000000000.000000000000000
 
 # actualiser le fichier profile
-source .profoile
+source .profile
 
 # pour vérifier si la modification est prise en compte
 echo BLUEBOT_TOKEN
