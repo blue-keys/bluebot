@@ -46,9 +46,23 @@ pub async fn get_owners(token : &str) -> HashSet<serenity::model::id::UserId> {
 }
 
 pub async fn get_client(token : &str, framework : StandardFramework) -> Client {
-    Client::builder(&token)
+    let client = Client::builder(&token)
         .event_handler(Handler)
         .framework(framework)
         .await
-        .expect(&UTILS.bot_conf.expect_client_new)
+        .expect(&UTILS.bot_conf.expect_client_builder);
+
+    {
+        let mut data = client.data.write().await;
+        data.insert::<ShardManagerContainer>(client.shard_manager.clone());
+    }
+
+    let shard_manager = client.shard_manager.clone();
+
+    tokio::spawn(async move {
+        tokio::signal::ctrl_c().await.expect("Could not register ctrl+c handler");
+        shard_manager.lock().await.shutdown_all().await;
+    });
+
+    client
 }
