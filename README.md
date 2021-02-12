@@ -53,4 +53,35 @@ echo BLUEBOT_TOKEN
 cargo run
 ```
 
+### Automatiser le start du bot sur Unix en SSH
 
+Dans le dossier du projet vous avez le start-bluebot-unix.sh qui fonctionne avec tmux, si vous ne l'avez pas installer le : 
+https://docs.bluekeys.org/guide/linux/introduction-a-tmux-terminal-multiplexer
+
+
+Le script permet de créer une session avec le fenêtre dans laquel le bot sera executé, ça permet que vous puissiez vous deconnecter du SSH sans mettre fin à votre programme.
+
+
+Il faut donner les droits d'exécution comme un programme a start-bluebot.sh :
+
+```bash
+# aller dans le repertoire du script
+sudo chmod +x start-bluebot.sh
+```
+
+
+```bash
+# retournez à la racine du projet et fait
+scripts/start-bluebot-unix.sh
+```
+
+A votre retour en SSH ou en local vous avez juste a rattacher votre dernière sessions :
+
+```bash
+tmux attach
+```
+ ou 
+
+```bash
+tmux attach -t bluebot
+```
