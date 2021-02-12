@@ -14,6 +14,8 @@ pub struct BotConf {
 #[derive(Deserialize)]
 pub struct Events {
     pub ready_msg : String,
+    pub azales_admin_error : String,
+    pub azales_admin : String,
 }
 
 #[derive(Deserialize)]
