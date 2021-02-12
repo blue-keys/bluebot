@@ -6,6 +6,6 @@ use super::{
 
 #[group("General")]
 #[description("Un groupe de commandes réunissant celles que l'on retrouve le plus généralement sur tous les bots")]
-#[commands(ping, info)]
+#[commands(ping, info, restart, shutdown)]
 pub struct General;
 
