@@ -11,7 +11,7 @@ Utils(
         azales_admin : "Azales est là !",
         azales_libre_msg_error : "Erreur lors de l'envoie du message dans le salon `tchat-libre`",
         azales_join : "Le meilleur administrateur `Azales` est de retour !",
-        azales_quit : "`Azales` reviendra dans une ou deux années plutonienne !",
+        azales_quit : "`Azales` reviendra dans une ou deux années (système plutonien) !",
     ),
     commands : Commands(
         ping : "`Pong !`",
