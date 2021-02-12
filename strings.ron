@@ -2,8 +2,8 @@ Utils(
     bot_conf : BotConf(
         prefix : "&",
         expect_token : "Impossible de trouver le token",
-        expect_client_new : "Erreur lors de l'initialisation du bot",
         var_token : "BLUEBOT_TOKEN",
+        expect_client_builder : "Erreur lors de l'initialisation du bot",
     ),
     events : Events(
         ready_msg : "Bluebot est réveillé",
@@ -14,7 +14,7 @@ Utils(
     commands : Commands(
         ping : "`Pong !`",
         info_title : "Informations me concernant : ",
-        info_desc : "Je suis un bot pour l'association BlueKeys créé pour facilité la vie des développeurs RUST.",
+        info_desc : "Je suis un bot créé pour le serveur BlueKeys afin de faciliter la vie des développeurs Rust.",
         info_fields : Some([
             ("Développé en : ", "Rust", false),
             ("Développé par : ", "Azales avec l'aide et la supervision de Léolios", false),

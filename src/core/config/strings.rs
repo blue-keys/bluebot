@@ -9,6 +9,7 @@ pub struct BotConf {
     pub expect_token : String,
     pub expect_client_new : String,
     pub var_token : String,
+    pub expect_client_builder : String,
 }
 
 #[derive(Deserialize)]
