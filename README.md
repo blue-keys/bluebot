@@ -28,3 +28,27 @@ C'est dans ce fichier que vous préciserez le nom de la variable d'environnement
 ### Ajouter une commande
 
 Pour ajouter une commande, il suffit de choisir dans quel groupe de commande vous voulez l'ajoutez (si vous en créez un nouveau n'oubliez pas de l'ajouter dans le fichier bot_config.rs (src/core/config/bot_config.rs) dans la fonction get_framework), une fois que votre groupe de commande est choisi il suffit tout simplement de suivre le modèle des commandes du fichier general.rs (src/commands/general.rs)
+
+## Installation Linux (Ubuntu 20.04 LTS)
+
+```bash
+# installation du langage, plus Cargo
+sudo apt install rustc
+```
+
+```bash
+# editer le fichier du profile de l'utilisateur
+nano .profile
+
+# ajouter à la fin votre token
+export BLUEBOT_TOKEN=O000000000000000000000000.000000000000000
+
+# actualiser le fichier profile
+source .profoile
+
+# pour vérifier si la modification est prise en compte
+echo BLUEBOT_TOKEN
+
+```
+
+
