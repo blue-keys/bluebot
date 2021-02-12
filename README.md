@@ -49,6 +49,8 @@ source .profoile
 # pour vérifier si la modification est prise en compte
 echo BLUEBOT_TOKEN
 
+# on exécute le bot pour le connecter à Discord
+cargo run
 ```
 
 
